@@ -67,7 +67,6 @@ return [
                 'headers' => [
                     'Content-Type' => 'application/json',
                     'Accept' => 'application/json',
-                    'Authorization' => 'Bearer EAAD5wpxZBE2oBAFTZBZCFZAQWvemZCud9iBwPeuhPmGDV2y29iWMRylWF1ehZAT1F0Ghus97nweDfIbcgntrln3mXZBpRZCXISgghq2e2YZCD0dHQnZArJL7cu4bsTqBpor154gWAHzTPdwLqCrPNdLZCVBkcdsD4T8cr1wmuZAiH4bBPxvqwT8C8ZA7GYkpfnZCvfGjTRbBwh9fMHoOiZBL9N9vEjWnyUn9EdKx1ZAMFg6xjmw3SgZDZD'
                 ],
 
                 /*
@@ -104,27 +103,7 @@ return [
                      * Body parameters which should be sent with the API call.
                      */
                     'bodyParams' => [
-                        'email' => 'user@gmail.com',
-                        'api_token' => 'AAD5wpxZBE2oBAFTZBZCFZAQWvemZCud9iBwPeuhPmGDV2y29iWMRylWF1ehZAT1F0Ghus97nweDfIbcgntrln3mXZBpRZCXISgghq2e2YZCD0dHQnZArJL7cu4bsTqBpor154gWAHzTPdwLqCrPNdLZCVBkcdsD4T8cr1wmuZAiH4bBPxvqwT8C8ZA7GYkpfnZCvfGjTRbBwh9fMHoOiZBL9N9vEjWnyUn9EdKx1ZAMFg6xjmw3SgZDZD',
-                        'password' => '123456789',
-                        'name' => 'admin user',
-                        'photos' => [
-                            [
-                                'id' => 307,
-                                'image' => 'https://scontent.fcmb5-1.fna.fbcdn.net/v/t1.18169-9/10888788_913559328656120_3978478648170247735_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=05277f&_nc_ohc=emjcPEXeuR8AX8iszHX&_nc_ht=scontent.fcmb5-1.fna&edm=AP4hL3IEAAAA&oh=8e4f34e486fc32ea51be791a45a76a01&oe=61737609',
-                                'album' => 'Cover Photos',
-                            ],
-                            [
-                                'id' => 311,
-                                'image' => 'https://scontent.fcmb5-1.fna.fbcdn.net/v/t1.6435-9/81360777_3058086770870021_1362496057312804864_n.jpg?_nc_cat=110&ccb=1-5&_nc_sid=8024bb&_nc_ohc=hWT31gNlcmIAX_katwW&_nc_ht=scontent.fcmb5-1.fna&edm=AP4hL3IEAAAA&oh=dde41808b832fef571046c0bb96361ba&oe=6172D91C',
-                                'album' => 'Timeline Photos',
-                            ],
-                            [
-                                'id' => 312,
-                                'image' => 'https://scontent.fcmb5-1.fna.fbcdn.net/v/t1.18169-9/381362_301102819901777_1569940744_n.jpg?_nc_cat=109&ccb=1-5&_nc_sid=e007fa&_nc_ohc=JzJHmAAwBfAAX_DjVHN&_nc_ht=scontent.fcmb5-1.fna&edm=AP4hL3IEAAAA&oh=788631eae675164e114dd7eac2ea9dfd&oe=61710ED6',
-                                'album' => 'fun',
-                            ]
-                        ]
+                      
                     ],
 
                     /*
