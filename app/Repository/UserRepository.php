@@ -7,6 +7,7 @@ use App\User;
 class UserRepository implements UserRepositoryInterface
 {
     /**
+     * create or update a user
      * @param userId
      * @return bool
      */

@@ -7,14 +7,20 @@ use App\Repository\GalleryRepositoryInterface;
 class GalleryRepository implements GalleryRepositoryInterface
 {
     /**
+     * get all photos
+     * @param int $userId
      * @return array
      */
-    public function all(): array
+    public function all($userId): array
     {
-        return Gallery::select('id', 'image', 'album')->get()->toArray();
+        return Gallery::select('id', 'image', 'album')
+            ->whereUserId($userId)
+            ->get()
+            ->toArray();
     }
 
     /**
+     * add new photos
      * @param array
      * @return bool
      */
@@ -24,7 +30,8 @@ class GalleryRepository implements GalleryRepositoryInterface
     }
 
     /**
-     * @param userId
+     * remove photos belong to login user
+     * @param int userId
      * @return bool
      */
     public function delete($userId): bool

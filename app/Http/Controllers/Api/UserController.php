@@ -23,6 +23,8 @@ class UserController extends Controller
     }
 
     /**
+     * create a user
+     * @Post("/authenticate")
      * @param Request $request
      * @return \Illuminate\Http\JsonResponse
      */

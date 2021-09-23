@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Past Book</title>
+
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="css/style.css" media="screen" />
+        <link rel="stylesheet" href="css/print.css" media="print" />
+        <script src="js/all.js"></script>
+
+        <link rel="stylesheet" href="css/highlight-darcula.css" media="" />
+        <script src="js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+<body class="" data-languages="[&quot;bash&quot;,&quot;javascript&quot;]">
+<a href="#" id="nav-button">
+      <span>
+        NAV
+            <img src="images/navbar.png" alt="-image" class=""/>
+      </span>
+</a>
+<div class="tocify-wrapper">
+                <div class="lang-selector">
+                            <a href="#" data-language-name="bash">bash</a>
+                            <a href="#" data-language-name="javascript">javascript</a>
+                    </div>
+        <div class="search">
+        <input type="text" class="search" id="input-search" placeholder="Search">
+    </div>
+    <ul class="search-results"></ul>
+
+    <ul id="toc">
+    </ul>
+
+            <ul class="toc-footer" id="toc-footer">
+                            <li><a href="./collection.json">View Postman collection</a></li>
+                            <li><a href="./openapi.yaml">View OpenAPI (Swagger) spec</a></li>
+                            <li><a href='http://github.com/knuckleswtf/scribe'>Documentation powered by Scribe ✍</a></li>
+                    </ul>
+            <ul class="toc-footer" id="last-updated">
+            <li>Last updated: September 23 2021</li>
+        </ul>
+</div>
+<div class="page-wrapper">
+    <div class="dark-box"></div>
+    <div class="content">
+        <h1>Introduction</h1>
+<p>Manage your Facebook Photo</p>
+<p>This documentation aims to provide all the information you need to work with our API.</p>
+<aside>As you scroll, you'll see code examples for working with the API in different programming languages in the dark area to the right (or as part of the content on mobile).
+You can switch the language used with the tabs at the top right (or from the nav menu at the top left on mobile).</aside>
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.10/lodash.min.js"></script>
+<script>
+    var baseUrl = "http://localhost";
+</script>
+<script src="js/tryitout-2.7.10.js"></script>
+<blockquote>
+<p>Base URL</p>
+</blockquote>
+<pre><code class="language-yaml">http://localhost</code></pre><h1>Authenticating requests</h1>
+<p>This API is not authenticated.</p><h1>Endpoints</h1>
+<h2>create a user</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST \
+    "http://localhost/api/authenticate" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -H "Authorization: Bearer EAAD5wpxZBE2oBAFTZBZCFZAQWvemZCud9iBwPeuhPmGDV2y29iWMRylWF1ehZAT1F0Ghus97nweDfIbcgntrln3mXZBpRZCXISgghq2e2YZCD0dHQnZArJL7cu4bsTqBpor154gWAHzTPdwLqCrPNdLZCVBkcdsD4T8cr1wmuZAiH4bBPxvqwT8C8ZA7GYkpfnZCvfGjTRbBwh9fMHoOiZBL9N9vEjWnyUn9EdKx1ZAMFg6xjmw3SgZDZD"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/authenticate"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+    "Authorization": "Bearer EAAD5wpxZBE2oBAFTZBZCFZAQWvemZCud9iBwPeuhPmGDV2y29iWMRylWF1ehZAT1F0Ghus97nweDfIbcgntrln3mXZBpRZCXISgghq2e2YZCD0dHQnZArJL7cu4bsTqBpor154gWAHzTPdwLqCrPNdLZCVBkcdsD4T8cr1wmuZAiH4bBPxvqwT8C8ZA7GYkpfnZCvfGjTRbBwh9fMHoOiZBL9N9vEjWnyUn9EdKx1ZAMFg6xjmw3SgZDZD",
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "user": {
+        "id": 33,
+        "name": "admin user",
+        "email": "user@gmail.com",
+        "email_verified_at": null,
+        "api_token": "AAD5wpxZBE2oBAFTZBZCFZAQWvemZCud9iBwPeuhPmGDV2y29iWMRylWF1ehZAT1F0Ghus97nweDfIbcgntrln3mXZBpRZCXISgghq2e2YZCD0dHQnZArJL7cu4bsTqBpor154gWAHzTPdwLqCrPNdLZCVBkcdsD4T8cr1wmuZAiH4bBPxvqwT8C8ZA7GYkpfnZCvfGjTRbBwh9fMHoOiZBL9N9vEjWnyUn9EdKx1ZAMFg6xjmw3SgZDZD",
+        "created_at": "2021-09-23 21:57:28",
+        "updated_at": "2021-09-23 22:04:40"
+    }
+}</code></pre>
+<div id="execution-results-POSTapi-authenticate" hidden>
+    <blockquote>Received response<span id="execution-response-status-POSTapi-authenticate"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-authenticate"></code></pre>
+</div>
+<div id="execution-error-POSTapi-authenticate" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-authenticate"></code></pre>
+</div>
+<form id="form-POSTapi-authenticate" data-method="POST" data-path="api/authenticate" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json","Authorization":"Bearer EAAD5wpxZBE2oBAFTZBZCFZAQWvemZCud9iBwPeuhPmGDV2y29iWMRylWF1ehZAT1F0Ghus97nweDfIbcgntrln3mXZBpRZCXISgghq2e2YZCD0dHQnZArJL7cu4bsTqBpor154gWAHzTPdwLqCrPNdLZCVBkcdsD4T8cr1wmuZAiH4bBPxvqwT8C8ZA7GYkpfnZCvfGjTRbBwh9fMHoOiZBL9N9vEjWnyUn9EdKx1ZAMFg6xjmw3SgZDZD"}' onsubmit="event.preventDefault(); executeTryOut('POSTapi-authenticate', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-POSTapi-authenticate" onclick="tryItOut('POSTapi-authenticate');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-POSTapi-authenticate" onclick="cancelTryOut('POSTapi-authenticate');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-POSTapi-authenticate" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-black">POST</small>
+ <b><code>api/authenticate</code></b>
+</p>
+</form>
+<h2>add new photos to gallery</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST \
+    "http://localhost/api/gallery/create" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -H "Authorization: Bearer EAAD5wpxZBE2oBAFTZBZCFZAQWvemZCud9iBwPeuhPmGDV2y29iWMRylWF1ehZAT1F0Ghus97nweDfIbcgntrln3mXZBpRZCXISgghq2e2YZCD0dHQnZArJL7cu4bsTqBpor154gWAHzTPdwLqCrPNdLZCVBkcdsD4T8cr1wmuZAiH4bBPxvqwT8C8ZA7GYkpfnZCvfGjTRbBwh9fMHoOiZBL9N9vEjWnyUn9EdKx1ZAMFg6xjmw3SgZDZD" \
+    -d '{"photos":["doloribus"]}'
+</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/gallery/create"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+    "Authorization": "Bearer EAAD5wpxZBE2oBAFTZBZCFZAQWvemZCud9iBwPeuhPmGDV2y29iWMRylWF1ehZAT1F0Ghus97nweDfIbcgntrln3mXZBpRZCXISgghq2e2YZCD0dHQnZArJL7cu4bsTqBpor154gWAHzTPdwLqCrPNdLZCVBkcdsD4T8cr1wmuZAiH4bBPxvqwT8C8ZA7GYkpfnZCvfGjTRbBwh9fMHoOiZBL9N9vEjWnyUn9EdKx1ZAMFg6xjmw3SgZDZD",
+};
+
+let body = {
+    "photos": [
+        "doloribus"
+    ]
+}
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "status": true
+}</code></pre>
+<div id="execution-results-POSTapi-gallery-create" hidden>
+    <blockquote>Received response<span id="execution-response-status-POSTapi-gallery-create"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-gallery-create"></code></pre>
+</div>
+<div id="execution-error-POSTapi-gallery-create" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-gallery-create"></code></pre>
+</div>
+<form id="form-POSTapi-gallery-create" data-method="POST" data-path="api/gallery/create" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json","Authorization":"Bearer EAAD5wpxZBE2oBAFTZBZCFZAQWvemZCud9iBwPeuhPmGDV2y29iWMRylWF1ehZAT1F0Ghus97nweDfIbcgntrln3mXZBpRZCXISgghq2e2YZCD0dHQnZArJL7cu4bsTqBpor154gWAHzTPdwLqCrPNdLZCVBkcdsD4T8cr1wmuZAiH4bBPxvqwT8C8ZA7GYkpfnZCvfGjTRbBwh9fMHoOiZBL9N9vEjWnyUn9EdKx1ZAMFg6xjmw3SgZDZD"}' onsubmit="event.preventDefault(); executeTryOut('POSTapi-gallery-create', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-POSTapi-gallery-create" onclick="tryItOut('POSTapi-gallery-create');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-POSTapi-gallery-create" onclick="cancelTryOut('POSTapi-gallery-create');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-POSTapi-gallery-create" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-black">POST</small>
+ <b><code>api/gallery/create</code></b>
+</p>
+<h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+<p>
+<b><code>photos</code></b>&nbsp;&nbsp;<small>string[]</small>  &nbsp;
+<input type="text" name="photos.0" data-endpoint="POSTapi-gallery-create" data-component="body" required  hidden>
+<input type="text" name="photos.1" data-endpoint="POSTapi-gallery-create" data-component="body" hidden>
+<br>
+
+</p>
+
+</form>
+<h2>get all gallery items without any filtering</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://localhost/api/gallery/all" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -H "Authorization: Bearer EAAD5wpxZBE2oBAFTZBZCFZAQWvemZCud9iBwPeuhPmGDV2y29iWMRylWF1ehZAT1F0Ghus97nweDfIbcgntrln3mXZBpRZCXISgghq2e2YZCD0dHQnZArJL7cu4bsTqBpor154gWAHzTPdwLqCrPNdLZCVBkcdsD4T8cr1wmuZAiH4bBPxvqwT8C8ZA7GYkpfnZCvfGjTRbBwh9fMHoOiZBL9N9vEjWnyUn9EdKx1ZAMFg6xjmw3SgZDZD"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/gallery/all"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+    "Authorization": "Bearer EAAD5wpxZBE2oBAFTZBZCFZAQWvemZCud9iBwPeuhPmGDV2y29iWMRylWF1ehZAT1F0Ghus97nweDfIbcgntrln3mXZBpRZCXISgghq2e2YZCD0dHQnZArJL7cu4bsTqBpor154gWAHzTPdwLqCrPNdLZCVBkcdsD4T8cr1wmuZAiH4bBPxvqwT8C8ZA7GYkpfnZCvfGjTRbBwh9fMHoOiZBL9N9vEjWnyUn9EdKx1ZAMFg6xjmw3SgZDZD",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "photos": [
+        {
+            "id": 320,
+            "image": "https:\/\/scontent.fcmb5-1.fna.fbcdn.net\/v\/t1.18169-9\/10888788_913559328656120_3978478648170247735_n.jpg?_nc_cat=106&amp;ccb=1-5&amp;_nc_sid=05277f&amp;_nc_ohc=emjcPEXeuR8AX8iszHX&amp;_nc_ht=scontent.fcmb5-1.fna&amp;edm=AP4hL3IEAAAA&amp;oh=8e4f34e486fc32ea51be791a45a76a01&amp;oe=61737609",
+            "album": "Cover Photos"
+        },
+        {
+            "id": 321,
+            "image": "https:\/\/scontent.fcmb5-1.fna.fbcdn.net\/v\/t1.18169-9\/10352989_873856192626434_1255523221916369249_n.jpg?_nc_cat=105&amp;ccb=1-5&amp;_nc_sid=05277f&amp;_nc_ohc=Kqww_jSSLlgAX8ZD8t3&amp;_nc_ht=scontent.fcmb5-1.fna&amp;edm=AP4hL3IEAAAA&amp;oh=b2511b35b53a7e97772bad8d3cd3c649&amp;oe=6173E8C8",
+            "album": "Cover Photos"
+        },
+        {
+            "id": 322,
+            "image": "https:\/\/scontent.fcmb5-1.fna.fbcdn.net\/v\/t1.18169-9\/63706_691306440881411_1701433828_n.jpg?_nc_cat=109&amp;ccb=1-5&amp;_nc_sid=05277f&amp;_nc_ohc=vaRfxU8BYvoAX96iLsS&amp;_nc_ht=scontent.fcmb5-1.fna&amp;edm=AP4hL3IEAAAA&amp;oh=8e265d9847d92e560f27a2d5ce772bec&amp;oe=61722202",
+            "album": "Cover Photos"
+        },
+        {
+            "id": 323,
+            "image": "https:\/\/scontent.fcmb5-1.fna.fbcdn.net\/v\/t1.6435-9\/81562314_3058086840870014_5141157762633302016_n.jpg?_nc_cat=102&amp;ccb=1-5&amp;_nc_sid=8024bb&amp;_nc_ohc=h5ilvUB2SfkAX9NT609&amp;_nc_ht=scontent.fcmb5-1.fna&amp;edm=AP4hL3IEAAAA&amp;oh=153793c3d5821e3d8e8b7e0298e7ca68&amp;oe=61713681",
+            "album": "Timeline Photos"
+        },
+        {
+            "id": 324,
+            "image": "https:\/\/scontent.fcmb5-1.fna.fbcdn.net\/v\/t1.6435-9\/81360777_3058086770870021_1362496057312804864_n.jpg?_nc_cat=110&amp;ccb=1-5&amp;_nc_sid=8024bb&amp;_nc_ohc=hWT31gNlcmIAX_katwW&amp;_nc_ht=scontent.fcmb5-1.fna&amp;edm=AP4hL3IEAAAA&amp;oh=dde41808b832fef571046c0bb96361ba&amp;oe=6172D91C",
+            "album": "Timeline Photos"
+        },
+        {
+            "id": 325,
+            "image": "https:\/\/scontent.fcmb5-1.fna.fbcdn.net\/v\/t1.18169-9\/381362_301102819901777_1569940744_n.jpg?_nc_cat=109&amp;ccb=1-5&amp;_nc_sid=e007fa&amp;_nc_ohc=JzJHmAAwBfAAX_DjVHN&amp;_nc_ht=scontent.fcmb5-1.fna&amp;edm=AP4hL3IEAAAA&amp;oh=788631eae675164e114dd7eac2ea9dfd&amp;oe=61710ED6",
+            "album": "fun"
+        },
+        {
+            "id": 326,
+            "image": "https:\/\/scontent.fcmb5-1.fna.fbcdn.net\/v\/t1.18169-9\/10676230_913563945322325_630016824910165679_n.jpg?_nc_cat=101&amp;ccb=1-5&amp;_nc_sid=7aed08&amp;_nc_ohc=fF4q8Rt73g4AX8CpppB&amp;_nc_ht=scontent.fcmb5-1.fna&amp;edm=AP4hL3IEAAAA&amp;oh=1f8eafd7466a684f0e883e6a7b9ce2fc&amp;oe=61737174",
+            "album": "Profile Pictures"
+        },
+        {
+            "id": 327,
+            "image": "https:\/\/scontent.fcmb5-1.fna.fbcdn.net\/v\/t1.18169-9\/373900_301105716568154_1119618857_n.jpg?_nc_cat=110&amp;ccb=1-5&amp;_nc_sid=e007fa&amp;_nc_ohc=x4RDsxsv8FAAX-xo3PB&amp;_nc_oc=AQlcl_oU8wdJBgh2D6SkHZi58VxcPfGm1gNWTvPZTq6V3uxDKU0i2EaeqDMNfO9qLpI&amp;_nc_ht=scontent.fcmb5-1.fna&amp;edm=AP4hL3IEAAAA&amp;oh=0353baa1c9fd324cc11159efaa07d368&amp;oe=617275B3",
+            "album": "fun"
+        }
+    ]
+}</code></pre>
+<div id="execution-results-GETapi-gallery-all" hidden>
+    <blockquote>Received response<span id="execution-response-status-GETapi-gallery-all"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-gallery-all"></code></pre>
+</div>
+<div id="execution-error-GETapi-gallery-all" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-gallery-all"></code></pre>
+</div>
+<form id="form-GETapi-gallery-all" data-method="GET" data-path="api/gallery/all" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json","Authorization":"Bearer EAAD5wpxZBE2oBAFTZBZCFZAQWvemZCud9iBwPeuhPmGDV2y29iWMRylWF1ehZAT1F0Ghus97nweDfIbcgntrln3mXZBpRZCXISgghq2e2YZCD0dHQnZArJL7cu4bsTqBpor154gWAHzTPdwLqCrPNdLZCVBkcdsD4T8cr1wmuZAiH4bBPxvqwT8C8ZA7GYkpfnZCvfGjTRbBwh9fMHoOiZBL9N9vEjWnyUn9EdKx1ZAMFg6xjmw3SgZDZD"}' onsubmit="event.preventDefault(); executeTryOut('GETapi-gallery-all', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETapi-gallery-all" onclick="tryItOut('GETapi-gallery-all');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETapi-gallery-all" onclick="cancelTryOut('GETapi-gallery-all');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETapi-gallery-all" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-green">GET</small>
+ <b><code>api/gallery/all</code></b>
+</p>
+</form>
+    </div>
+    <div class="dark-box">
+                    <div class="lang-selector">
+                                    <a href="#" data-language-name="bash">bash</a>
+                                    <a href="#" data-language-name="javascript">javascript</a>
+                            </div>
+            </div>
+</div>
+<script>
+    $(function () {
+        var languages = ["bash","javascript"];
+        setupLanguages(languages);
+    });
+</script>
+</body>
+</html>
