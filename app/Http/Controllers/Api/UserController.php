@@ -23,12 +23,12 @@ class UserController extends Controller
     }
 
     /**
-     * create a user
+     * authenticate a user
      * @Post("/authenticate")
      * @param Request $request
      * @return \Illuminate\Http\JsonResponse
      */
-    public function create(Request $request) {
+    public function authenticate(Request $request) {
 
         $data = $request->all();
         $user = $this->userRepositoryInterface->create($data);

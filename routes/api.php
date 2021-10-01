@@ -13,7 +13,7 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::post('/authenticate', 'Api\UserController@create');
+Route::post('/authenticate', 'Api\UserController@authenticate');
 Route::group(['middleware' => ['api', 'auth:api'], 'prefix' => 'gallery'], function ()
 {
     Route::post('/create', 'Api\GalleryController@create');
